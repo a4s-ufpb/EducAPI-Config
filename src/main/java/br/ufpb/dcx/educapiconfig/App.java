@@ -56,7 +56,7 @@ public class App extends JFrame implements ActionListener {
         button.addActionListener(te);
 
         textField = new JTextField(30);
-        textField.setText((String)config.get("dominio"));
+        textField.setText((String)config.get("domain"));
 
         JPanel panel = new JPanel();
         panel.setBorder(new EmptyBorder(50, 50, 50, 50));
@@ -74,7 +74,7 @@ public class App extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         String s = e.getActionCommand();
         if (s.equals("Salvar")) {
-            config.put("dominio", textField.getText());
+            config.put("domain", textField.getText());
             salvarConfig();
         }
     }
